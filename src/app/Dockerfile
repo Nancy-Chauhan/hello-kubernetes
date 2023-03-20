@@ -22,6 +22,8 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Install app dependencies
+RUN pwd && ls -ahl
+COPY . /usr/src/app/
 COPY package.json /usr/src/app/
 RUN npm install
 
